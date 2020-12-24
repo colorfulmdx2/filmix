@@ -1,0 +1,26 @@
+.slider {
+
+}
+
+.button {
+  position: fixed;
+  background: none;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+
+
+  &:first-child {
+    left: 0;
+    top: 300px
+  }
+  &:last-child {
+    right: 0;
+    top: 300px
+  }
+}
+a {
+  text-decoration:none;
+  color: white;
+
+}
