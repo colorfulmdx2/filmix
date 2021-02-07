@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../redux-store/store";
 import {getMoviesTC} from "./reducer-main-page";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
-import {Grid, LinearProgress} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 import {MovieSelection} from "../common-components/MovieSelection/MovieSelection";
 import avengers from '../assets/images/avengers.jpg'
 import joker from '../assets/images/joker.jpg'
@@ -18,8 +18,6 @@ export const MainPage = () => {
     const dispatch = useDispatch()
 
     const sliderData = useSelector<AppStateType>(state => state.mainPageReducer.sliderData.results)
-    const preloader = useSelector<AppStateType, boolean>(state => state.preloaderReducer.preloader)
-
 
     useEffect(() => {
         dispatch(getMoviesTC(1))

@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
-import {getMoviesTC} from "../a2 - main-page/reducer-main-page";
+import {getMoviesTC, setSliderData} from "../a2 - main-page/reducer-main-page";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStateType} from "../redux-store/store";
 import {MovieResponseType} from "../api/movie-api";
 import {MovieElement} from "../common-components/movie- element/MovieElement";
-import {Grid, LinearProgress} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 import InfiniteScroll from "react-infinite-scroll-component";
 import {getFavoritesMovies} from "../redux-store/login-reducer";
 
@@ -19,7 +19,6 @@ export const MoviesList = (props: MovieListType) => {
     const moviesData = useSelector<AppStateType, Array<MovieResponseType>>(state => state.mainPageReducer.movieData)
     const favoritesMoviesData = useSelector<AppStateType, any>(state => state.loginReducer.favoriteMovies)
     const currentPage = useSelector<AppStateType, number>(state => state.mainPageReducer.currentPage)
-    const preloader = useSelector<AppStateType, boolean>(state => state.preloaderReducer.preloader)
 
     useEffect(() => {
         if (props.query === 'favorites') {
@@ -66,10 +65,6 @@ export const MoviesList = (props: MovieListType) => {
 
     }
 
-    /*if (preloader) {
-        return <LinearProgress style={{marginTop: 2}} color="secondary"/>
-    }*/
-
     return (
 
         <InfiniteScroll dataLength={moviesData.length}
@@ -79,10 +74,10 @@ export const MoviesList = (props: MovieListType) => {
                         scrollThreshold={0.95}
                         style={{width: '100%', margin: '0 auto'}}
         >
-            <Grid container justify="space-around" style={{width: '100%', marginTop: 10}}>
+            <Grid container justify="space-around" style={{width: '100%', marginTop: 10, fontSize: 30}}>
                 {
                     (props.query === 'favorites')
-                        ? objIsEmpty(favoritesMoviesData) ? 'Here is no favorites movies yet' : favorites
+                        ? objIsEmpty(favoritesMoviesData) ? 'Here is no favorites yet' : favorites
                         : movies
                 }
             </Grid>

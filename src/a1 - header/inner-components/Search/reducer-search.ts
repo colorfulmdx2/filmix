@@ -1,7 +1,6 @@
 import {moviesAPI} from "../../../api/movie-api";
-import {Dispatch} from "react";
 import {AppStateType} from "../../../redux-store/store";
-import { ThunkAction } from "redux-thunk";
+import {ThunkAction} from "redux-thunk";
 
 //types-----------------------------------------------------------------------------------------------------------------
 
@@ -19,15 +18,6 @@ type setSearchResult = ReturnType<typeof setSearchResult>
 type ActionsType = setSearchResult
 
 export type ThunkActionType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
-
-export type SearchResponseType = {
-    page: number
-    results: any
-    total_pages: number
-    total_results: number
-}
-
-export type SearchResultsType = Array<SearchResultsElementType>
 
 type SearchResultsElementType = {
     adult: boolean
@@ -83,7 +73,6 @@ export const searchMovieTC = (query: string, page: number): ThunkActionType => a
     try {
         const response = await moviesAPI.searchMovie(query, page)
         dispatch(setSearchResult(response))
-
     } catch (e) {
         console.log(e)
     }

@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import {Card, CardActionArea, CardContent, Link, Typography} from "@material-ui/core";
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
+import {NavLink} from "react-router-dom";
 
 
 type MovieSelectionType = {
@@ -62,7 +63,7 @@ export const MovieSelection = (props: MovieSelectionType) => {
     const classes = useStyles();
 
     return (
-        <Link style={{textDecoration: 'none'}} href={props.href}>
+        <NavLink style={{textDecoration: 'none'}} to={props.href}>
             <Card className={classes.card}>
                 <CardActionArea className={classes.cardActionArea}>
 
@@ -75,6 +76,6 @@ export const MovieSelection = (props: MovieSelectionType) => {
 
                 </CardActionArea>
             </Card>
-        </Link>
+        </NavLink>
     )
 }

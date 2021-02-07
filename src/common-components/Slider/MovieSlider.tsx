@@ -54,7 +54,7 @@ export const MovieSlider = (props: MovieSliderType) => {
     const classes = useStyles();
 
     const sliderElements = props.sliderData && props.sliderData.map((element: any, index: number) =>
-        <a href={'/'}>
+
             <SliderElement
                 index={index}
                 backdrop_path={element.backdrop_path}
@@ -62,7 +62,7 @@ export const MovieSlider = (props: MovieSliderType) => {
                 vote_average={element.vote_average}
                 id={element.id}
                 key={element.id}/>
-        </a>)
+        )
 
     return (
         <CarouselProvider
@@ -74,7 +74,6 @@ export const MovieSlider = (props: MovieSliderType) => {
             touchEnabled={props.touchEnabled}
             visibleSlides={visibleSlides}>
 
-            {/*<Heading variant={'h4'} heading={'Top movies'}/>*/}
 
             <Slider className={style.slider}>
                 {sliderElements}

@@ -28,8 +28,6 @@ type PropsType = {
 
 export const MovieElement = (props: PropsType) => {
 
-    //console.log(props.movie)
-
     const darkMode = useSelector<AppStateType, boolean>(state => state.darkThemeReducer.darkMode)
     const favoritesMoviesData = useSelector<AppStateType, any>(state => state.loginReducer.favoriteMovies)
     const user = useSelector<AppStateType, any>(state => state.loginReducer.user)

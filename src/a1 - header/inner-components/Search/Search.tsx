@@ -19,20 +19,15 @@ export const Search = (props: SearchType) => {
     const dispatch = useDispatch()
 
     const [text, setText] = useState('')
+
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setText(e.currentTarget.value)
-        console.log(searchResult)
     }
 
     const searchResult = useSelector<AppStateType, any>(state => state.searchReducer.search.results)
 
     useEffect(() => {
-
-
-
             dispatch(searchMovieTC(text, 1))
-
-
     }, [text, dispatch])
 
 
@@ -83,7 +78,7 @@ export const Search = (props: SearchType) => {
         }),
     );
 
-    const BootstrapInput = withStyles((theme: Theme) =>
+    const BootstrapInput =  withStyles((theme: Theme) =>
         createStyles({
             root: {
                 'label + &': {
@@ -119,7 +114,7 @@ export const Search = (props: SearchType) => {
                 '&:focus': {
                     /* boxShadow: `${fade(theme.palette.secondary.main, 0.50)} 0 0 0 0.2rem`,
                      borderColor: theme.palette.primary.main,*/
-                },
+            },
                 '.Mui-error': {
                     backgroundColor: 'red'
                 },
@@ -127,7 +122,6 @@ export const Search = (props: SearchType) => {
             },
         }),
     )(InputBase);
-
 
     const classes = useStyles()
 
@@ -140,7 +134,6 @@ export const Search = (props: SearchType) => {
                          onClick={e => e.stopPropagation()}
             >
                 <BootstrapInput
-                    autoFocus
                     onChange={onChangeHandler}
                     value={text}
                 />

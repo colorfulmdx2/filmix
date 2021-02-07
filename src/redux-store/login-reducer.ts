@@ -35,7 +35,6 @@ export const loginReducer = (state = initialState, action: ActionType) => {
             return {...state, isAuth: action.payload.isAuth}
         }
         case 'LOGIN/SET-USER': {
-            console.log(action.payload.user)
             return {...state, user: action.payload.user}
         }
         case 'LOGIN/VERIFY_SUCCESS':
@@ -70,7 +69,7 @@ export const login = () => async (dispatch: any) => {
     const provider = new firebase.auth.GoogleAuthProvider()
     provider.addScope('profile')
     provider.addScope('email')
-    console.log(myFirebase)
+
     const result = await firebase.auth().signInWithPopup(provider)
     try {
         console.log(result)
@@ -101,7 +100,6 @@ export const verifyAuth = () => async (dispatch: any) => {
     await firebase
         .auth()
         .onAuthStateChanged( async user => {
-            console.log(user)
             if (user !== null) {
                 dispatch(receiveLogin(user))
                 await dispatch(getFavoritesMovies())
@@ -126,7 +124,6 @@ export const getFavoritesMovies = () => async (dispatch: any) => {
         documents[doc.id] = doc.data()
     })
     dispatch(setFavoritesMovies(documents))
-    console.log(documents)
 
 }
 

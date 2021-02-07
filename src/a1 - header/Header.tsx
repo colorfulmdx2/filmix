@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
         sectionDesktop: {
             display: 'flex',
             [theme.breakpoints.up('sm')]: {
-               display: 'flex',
+                display: 'flex',
 
             },
         },
@@ -103,7 +103,6 @@ export default function Header(props: HeaderType) {
                             <IconButton color="inherit">
                                 <Badge badgeContent={Object.keys(favoritesMoviesData).length}
                                        color="secondary"
-                                    /*variant="dot"*/
                                        anchorOrigin={{
                                            vertical: 'bottom',
                                            horizontal: 'right',
@@ -116,19 +115,9 @@ export default function Header(props: HeaderType) {
 
                         {
                             user ? <div>
-                                <Avatar src={user.photoURL}
-                                        onClick={handleClick}
-                                        style={{width: 30, height: 30, cursor: 'pointer', margin: '9px 0px 0px 7px'}}/>
-                                   {/* <img
-                                        style={{width: 30, borderRadius: '50%', cursor: 'pointer'}}
-                                        role='button'
-                                        alt='avatar'
-                                        src={user.photoURL}
-                                        height='100%'
-                                        aria-controls="simple-menu"
-                                        aria-haspopup="true"
-                                        onClick={handleClick}
-                                    />*/}
+                                    <Avatar src={user.photoURL}
+                                            onClick={handleClick}
+                                            style={{width: 30, height: 30, cursor: 'pointer', margin: '9px 0px 0px 7px'}}/>
                                     <Menu
                                         style={{top: '45px'}}
                                         id="simple-menu"
@@ -154,7 +143,6 @@ export default function Header(props: HeaderType) {
                     onCancel={searchHandler}
                     darkMode={darkMode}
             />
-
 
 
         </div>

@@ -2,46 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b785196-467a-4268-a332-8ec9a975c6a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a1 - header/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a1 - header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a1 - header/inner-components/Search-result-element/SearchResultElement.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a1 - header/inner-components/Search/Search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a1 - header/inner-components/Search/reducer-search.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a2 - main-page/MainPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a2 - main-page/reducer-main-page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a3 - movies-list/MoviesList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a4 - movie-page/MoviePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/a4 - movie-page/MoviePage_Reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/movie-api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/avengers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/batman.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/fast.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/google.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/joker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/ring.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/tenet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common-components/MovieSelection/MovieSelection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common-components/Slider/MovieSlider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common-components/Slider/Slider.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common-components/Slider/slider-element/SliderElement.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common-components/Title/Title.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common-components/movie- element/MovieElement.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/firebase/firebase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/material-ui/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux-store/dark-theme-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux-store/login-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux-store/preloader-reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux-store/store.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a1 - header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/a1 - header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a1 - header/inner-components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/a1 - header/inner-components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a1 - header/inner-components/Search/reducer-search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/a1 - header/inner-components/Search/reducer-search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a2 - main-page/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/a2 - main-page/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a2 - main-page/reducer-main-page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/a2 - main-page/reducer-main-page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a3 - movies-list/MoviesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/a3 - movies-list/MoviesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/a4 - movie-page/MoviePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/a4 - movie-page/MoviePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common-components/MovieSelection/MovieSelection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common-components/MovieSelection/MovieSelection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common-components/Slider/MovieSlider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common-components/Slider/MovieSlider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common-components/movie- element/MovieElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common-components/movie- element/MovieElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux-store/login-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux-store/login-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../movie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -101,37 +74,70 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608826026964</updated>
-      <workItem from="1608826030383" duration="1033000" />
+      <workItem from="1608826030383" duration="9239000" />
+      <workItem from="1609670039660" duration="29000" />
+      <workItem from="1611304083959" duration="10223000" />
+      <workItem from="1611406352462" duration="34191000" />
+      <workItem from="1612676829999" duration="746000" />
+      <workItem from="1612678124195" duration="11457000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1608827571224</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608827571224</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1608827333575">
+    <state x="422" y="0" key="CommitChangelistDialog2" timestamp="1608827568838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608827333575" />
+    <state x="422" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1608827568838" />
+    <state x="640" y="159" key="FileChooserDialogImpl" timestamp="1612677785099">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="159" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1612677785099" />
     <state x="772" y="365" key="Github.ShareDialog" timestamp="1608827249543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="772" y="365" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608827249543" />
-    <state width="1887" height="252" key="GridCell.Tab.0.bottom" timestamp="1608827088760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1887" height="252" key="GridCell.Tab.0.bottom" timestamp="1609433992591">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1887" height="252" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609433992591" />
     <state width="1887" height="252" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608827088760" />
-    <state width="1887" height="252" key="GridCell.Tab.0.center" timestamp="1608827088760">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1887" height="252" key="GridCell.Tab.0.center" timestamp="1609433992591">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1887" height="252" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609433992591" />
     <state width="1887" height="252" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608827088760" />
-    <state width="1887" height="252" key="GridCell.Tab.0.left" timestamp="1608827088759">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1887" height="252" key="GridCell.Tab.0.left" timestamp="1609433992573">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1887" height="252" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609433992573" />
     <state width="1887" height="252" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608827088759" />
-    <state width="1887" height="252" key="GridCell.Tab.0.right" timestamp="1608827088760">
+    <state width="1887" height="252" key="GridCell.Tab.0.right" timestamp="1609433992591">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1887" height="252" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609433992591" />
+    <state width="1887" height="252" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608827088760" />
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2" timestamp="1608827573641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1887" height="252" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608827088760" />
+    <state x="352" y="122" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608827573641" />
+    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup" timestamp="1612114372740">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="453" y="-2" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1612114372740" />
   </component>
 </project>

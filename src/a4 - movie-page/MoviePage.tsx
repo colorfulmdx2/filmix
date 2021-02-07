@@ -1,17 +1,17 @@
-import React, {useEffect} from "react";
-import {NavLink, useParams} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {NavLink, Redirect, Route, useHistory, useParams, useRouteMatch} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {getMoviesPageDataTC, setIsData, setSimilarMoviesData} from "./MoviePage_Reducer";
+import {getMoviesPageDataTC, setIsData} from "./MoviePage_Reducer";
 import {AppStateType} from "../redux-store/store";
 import {
     Button,
     Card,
     CardActionArea,
-    CardActions,
-    CardMedia, Divider,
+    CardMedia,
+    Divider,
     Grid,
+    IconButton,
     LinearProgress,
-    Link,
     Typography
 } from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
@@ -20,18 +20,20 @@ import {createStyles, Theme} from "@material-ui/core/styles";
 import {MovieImagesArrayResponseType} from "../api/movie-api";
 import {pink} from "@material-ui/core/colors";
 import {addMovieToFavorite, removeMovieFromFavorite} from "../redux-store/login-reducer";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 
 export const MoviePage = () => {
 
     const params = useParams<{ id: string }>()
+
     const dispatch = useDispatch()
     const {images, movieData, similarMovies, isData} = useSelector<AppStateType, any>(state => state.moviePageReducer)
     const darkMode = useSelector<AppStateType, boolean>(state => state.darkThemeReducer.darkMode)
     const favoritesMoviesData = useSelector<AppStateType, any>(state => state.loginReducer.favoriteMovies)
     const user = useSelector<AppStateType, any>(state => state.loginReducer.user)
 
-    console.log(movieData, 'dataaaaaa')
 
     useEffect(() => {
         dispatch(getMoviesPageDataTC(Number(params.id)))
@@ -109,15 +111,19 @@ export const MoviePage = () => {
 
     const classes = useStyles();
 
+    let {url} = useRouteMatch()
+
     const movieImages = isData && images.backdrops.map((element: MovieImagesArrayResponseType, index: number) =>
-        index <= 3 && <Grid item xs={12} sm={6} md={6} lg={3} xl={3}>
-            <Card className={classes.movieImageCard}>
-                <CardActionArea>
-                    <CardMedia className={classes.movieImage}
-                               image={`https://image.tmdb.org/t/p/w500/${element.file_path}`}/>
-                </CardActionArea>
-            </Card>
-        </Grid>
+        index <= 3 && <NavLink to={`${url}/image/${index}/`}>
+            <Grid item xs={12} sm={6} md={6} lg={3} xl={3}>
+                <Card className={classes.movieImageCard}>
+                    <CardActionArea>
+                        <CardMedia className={classes.movieImage}
+                                   image={`https://image.tmdb.org/t/p/w500/${element.file_path}`}/>
+                    </CardActionArea>
+                </Card>
+            </Grid>
+        </NavLink>
     )
 
     const similar = isData && similarMovies.map((element: any) =>
@@ -133,12 +139,12 @@ export const MoviePage = () => {
         </Grid>
     )
 
-    const addMovieToFavoriteHandler = (movie: any)=> {
+    const addMovieToFavoriteHandler = (movie: any) => {
 
         dispatch(addMovieToFavorite(movie))
     }
 
-    const removeMovieFromFavoriteHandler = (movie: any)=> {
+    const removeMovieFromFavoriteHandler = (movie: any) => {
 
         dispatch(removeMovieFromFavorite(movie))
     }
@@ -164,14 +170,19 @@ export const MoviePage = () => {
                             {
                                 user !== null
                                     ? favoritesMoviesData[movieData.data.id]
-                                    ? <Button className={classes.removeButton} onClick={() => { removeMovieFromFavoriteHandler(movieData.data) }} size="medium" color="primary" variant={"contained"}>
+                                    ? <Button className={classes.removeButton} onClick={() => {
+                                        removeMovieFromFavoriteHandler(movieData.data)
+                                    }} size="medium" color="primary" variant={"contained"}>
                                         Remove from Favorites
                                     </Button>
-                                    : <Button className={classes.button} onClick={() => { addMovieToFavoriteHandler(movieData.data) }} size="medium" color="secondary" variant={"contained"}>
+                                    : <Button className={classes.button} onClick={() => {
+                                        addMovieToFavoriteHandler(movieData.data)
+                                    }} size="medium" color="secondary" variant={"contained"}>
                                         Add to Favorites
                                     </Button>
 
-                                    : <Button className={classes.button} disabled size="medium" color="secondary" variant={"contained"}>
+                                    : <Button className={classes.button} disabled size="medium" color="secondary"
+                                              variant={"contained"}>
                                         Add to Favorites
                                     </Button>
                             }
@@ -249,8 +260,120 @@ export const MoviePage = () => {
                         {similar}
                     </Grid>
 
+                    <Route path={`${url}/image/:index`} render={() => <Images11 data={images} url={url}/>}/>
+
                 </Grid>
             }
         </>
+    )
+}
+
+const Images11 = (props: any) => {
+
+    const useStyles = makeStyles((theme: Theme) =>
+        createStyles({
+            container: {
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                height: '100vh',
+                width: '100vw',
+                overflow: 'hidden',
+                backgroundColor: 'rgba(0, 0, 0, 0.6)',
+
+            },
+            card: {
+                position: 'relative',
+                width: 'max-content',
+                margin: '100px auto',
+            },
+            image: {
+                height: 614,
+                width: 1100,
+                [theme.breakpoints.down('lg')]: {
+                    height: 614,
+                    width: 1100,
+                },
+                [theme.breakpoints.down('md')]: {
+                    height: 514,
+                    width: 900,
+                },
+                [theme.breakpoints.down('sm')]: {
+                    height: 341,
+                    width: 600,
+                },
+                [theme.breakpoints.down('xs')]: {
+                    height: 198,
+                    width: 356,
+                },
+            },
+            buttonsContainer: {
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                display: 'flex',
+                marginTop: '25%'
+            }
+        }),
+    );
+
+    const classes = useStyles();
+
+    const params2 = useParams<{ index: string }>()
+
+    const history = useHistory()
+
+    const [flag, setFlag] = useState(false)
+
+    const clickHandler = (e: any) => {
+        e.stopPropagation()
+        setFlag(true)
+    }
+
+    if (flag) {
+        return <Redirect to={`${props.url}`}/>
+    }
+
+    const prevHandler = () => {
+        history.push(`${props.url}/image/${Number(params2.index) - 1}`)
+    }
+
+    const nextHandler = () => {
+        history.push(`${props.url}/image/${Number(params2.index) + 1}`)
+    }
+
+
+
+    let pIndex = Number(params2.index)
+    return (
+        <div>
+            <div className={classes.container}
+                 onClick={clickHandler}>
+
+                <Card className={classes.card} onClick={(e) => {
+                    e.stopPropagation()
+                }}>
+                    <CardMedia className={classes.image}
+                               image={`https://image.tmdb.org/t/p/w500/${props.data.backdrops[`${params2.index}`].file_path}`}/>
+
+                    <div className={classes.buttonsContainer} onClick={(e) => {
+                        e.stopPropagation()
+                    }}>
+                        <IconButton disabled={pIndex === 0 && true}  onClick={prevHandler} >
+                            <ArrowBackIosIcon fontSize="large"/>
+                        </IconButton>
+                        <div style={{flexGrow: 1}}></div>
+                        <IconButton disabled={ pIndex === (props.data.backdrops.length - 1) && true} onClick={nextHandler}>
+                            <ArrowForwardIosIcon fontSize="large"/>
+                        </IconButton>
+                    </div>
+                </Card>
+
+
+            </div>
+
+        </div>
+
     )
 }

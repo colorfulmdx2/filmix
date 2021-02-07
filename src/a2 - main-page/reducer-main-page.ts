@@ -87,7 +87,6 @@ export const getMoviesTC = (page: number, query?: string): ThunkActionType => as
 
     dispatch(setPreloader(true))
     try {
-
         const response = await moviesAPI.getMovies(page, query)
         dispatch(page > 1 ? setMoreMovieData(response.results) : setMovieData(response.results))
         dispatch(setSliderData(response))
